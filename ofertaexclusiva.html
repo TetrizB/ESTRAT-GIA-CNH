@@ -1,23 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carregando Oferta Exclusiva...</title>
-    <!-- Redirecionamento via Meta Tag (Fallback) -->
-    <meta http-equiv="refresh" content="0; url=index.html?page=oferta">
-    <style>
-        body { background-color: #000; display: flex; justify-content: center; align-items: center; height: 100vh; color: #FFD000; font-family: sans-serif; }
-    </style>
+<meta http-equiv="refresh" content="0; url=/index.html?page=oferta">
 </head>
 <body>
-    <p>Carregando oferta especial...</p>
-    <script>
-        // Redirecionamento via JavaScript (Principal)
-        // Mantém os parâmetros de URL existentes se houver (como UTMS)
-        const params = new URLSearchParams(window.location.search);
-        params.set('page', 'oferta');
-        window.location.replace("index.html?" + params.toString());
-    </script>
+<script>window.location.replace("/index.html?page=oferta");</script>
 </body>
 </html>
