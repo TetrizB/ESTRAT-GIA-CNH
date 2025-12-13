@@ -1042,9 +1042,12 @@
         // INITIALIZATION & BACK REDIRECT TRAP
         // ----------------------------------------------------
         window.onload = function () {
-            // 1. Check if we need to show offer immediately (redirected from ofertaexclusiva.html)
+            // 1. Check if we need to show offer immediately (redirected from ofertaexclusiva.html or direct path)
             const urlParams = new URLSearchParams(window.location.search);
-            if(urlParams.get('page') === 'oferta') {
+            // FIX: Check path name as well for direct access via rewrite
+            const isOfferPath = window.location.pathname.includes('ofertaexclusiva') || window.location.pathname.includes('oferta-exclusiva');
+            
+            if(urlParams.get('page') === 'oferta' || isOfferPath) {
                 showOfferPage();
             } else {
                 // Initialize Home Timer
