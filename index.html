@@ -757,8 +757,9 @@
                 </p>
                 
                 <!-- Hidden Link that triggers Offer Mode -->
+                <!-- We use a real link here, so bots can crawl it, but we let JS handle it first if possible -->
                 <div class="mt-8 text-center">
-                    <a href="#" onclick="showOfferPage(event)" class="text-[10px] text-zinc-900 hover:text-zinc-800 transition-colors cursor-default select-none">•</a>
+                    <a href="ofertaexclusiva.html" class="text-[10px] text-zinc-900 hover:text-zinc-800 transition-colors cursor-default select-none">•</a>
                 </div>
             </div>
         </footer>
@@ -980,7 +981,7 @@
         }
 
         // ----------------------------------------------------
-        // VIEW CONTROLLER (Fixes 404 by keeping it all in one file)
+        // VIEW CONTROLLER
         // ----------------------------------------------------
         function showOfferPage(e) {
             if(e) e.preventDefault();
@@ -1037,8 +1038,11 @@
             }
         });
 
+        // ----------------------------------------------------
+        // INITIALIZATION & BACK REDIRECT TRAP
+        // ----------------------------------------------------
         window.onload = function () {
-            // Check URL param first
+            // 1. Check if we need to show offer immediately (redirected from ofertaexclusiva.html)
             const urlParams = new URLSearchParams(window.location.search);
             if(urlParams.get('page') === 'oferta') {
                 showOfferPage();
@@ -1048,17 +1052,36 @@
                 const displayHours = document.querySelector('#h-val');
                 const displayMinutes = document.querySelector('#m-val');
                 const displaySeconds = document.querySelector('#s-val');
-                startTimer(fourHours, displayHours, displayMinutes, displaySeconds);
+                if(displayHours) startTimer(fourHours, displayHours, displayMinutes, displaySeconds);
 
-                // Initialize Back Button Trap
-                (function() {
-                    history.pushState({view: 'home'}, "Home", window.location.href);
-                    history.pushState({view: 'home'}, "Home", window.location.href);
+                // 2. BACK BUTTON TRAP LOGIC
+                // Browsers require interaction before pushing state is effective for trapping
+                let backTrapArmed = false;
 
-                    window.onpopstate = function(event) {
-                        showOfferPage();
-                    };
-                })();
+                function armBackTrap() {
+                    if (backTrapArmed) return;
+                    
+                    // Push state twice to create a history buffer
+                    history.pushState({view: 'home'}, document.title, window.location.href);
+                    history.pushState({view: 'home'}, document.title, window.location.href);
+                    
+                    backTrapArmed = true;
+                    console.log("Back trap armed");
+                }
+
+                // Arm the trap on first user interaction
+                ['click', 'scroll', 'touchstart'].forEach(evt => 
+                    window.addEventListener(evt, armBackTrap, { once: true })
+                );
+
+                // Listen for back button
+                window.onpopstate = function(event) {
+                    if (backTrapArmed) {
+                         // Prevent default back behavior by pushing state again
+                         history.pushState({view: 'offer'}, "Oferta", window.location.href);
+                         showOfferPage();
+                    }
+                };
             }
         };
     </script>
