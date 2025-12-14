@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carregando Oferta Exclusiva...</title>
-    <!-- Redirecionamento via Meta Tag (Fallback) -->
-    <meta http-equiv="refresh" content="0; url=../index.html?page=oferta">
+    <title>Oferta Exclusiva - Estratégia CNH</title>
+    <meta name="robots" content="noindex, nofollow">
     <style>
-        body { background-color: #000; display: flex; justify-content: center; align-items: center; height: 100vh; color: #FFD000; font-family: sans-serif; }
+        body { background-color: #000; color: #FFD000; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; margin: 0; }
+        .loader { border: 4px solid #333; border-top: 4px solid #FFD000; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 15px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
+    <div class="loader"></div>
     <p>Carregando oferta especial...</p>
     <script>
-        // Redirecionamento via JavaScript (Principal)
-        // Usa '../' para voltar para a raiz e adiciona o parâmetro
+        // Captura parâmetros existentes (UTMs) e adiciona o page=oferta
         const params = new URLSearchParams(window.location.search);
         params.set('page', 'oferta');
-        window.location.replace("../index.html?" + params.toString());
+        
+        // Redireciona para a raiz (SPA) forçando o recarregamento
+        window.location.replace("/index.html?" + params.toString());
     </script>
 </body>
 </html>
