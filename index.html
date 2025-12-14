@@ -776,154 +776,144 @@
     <!-- ========================================= -->
     <!-- OFFER PAGE CONTENT (ID: page-offer)   -->
     <!-- ========================================= -->
-    <div id="page-offer" class="hidden bg-gray-50 min-h-screen">
+    <!-- Layout "Estratégia CNH One Page Checkout" -->
+    <div id="page-offer" class="hidden bg-gray-50 min-h-screen pb-12">
         
-        <!-- 1. TOPO — INTERRUPÇÃO + URGÊNCIA -->
-        <div class="bg-traffic-red text-white text-center py-3 px-4 font-black uppercase tracking-widest text-sm md:text-base sticky top-0 z-50 shadow-lg flex items-center justify-center gap-2 animate-pulse">
-            <i data-lucide="hand" class="w-5 h-5"></i>
-            Pare! Não feche esta página
+        <!-- Header Minimalista -->
+        <header class="bg-white border-b border-gray-100 py-4 sticky top-0 z-50 shadow-sm">
+            <div class="container mx-auto px-4 flex justify-between items-center max-w-xl">
+                <img src="https://i.postimg.cc/G22Gz9k7/Design-sem-nome-(4).png" alt="Estratégia CNH" class="h-6 md:h-8" />
+                <div class="flex items-center gap-1 text-[10px] font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full border border-green-200">
+                    <i data-lucide="lock" class="w-3 h-3"></i> Ambiente Seguro
+                </div>
+            </div>
+        </header>
+
+        <!-- Faixa de Urgência -->
+        <div class="bg-traffic-red text-white text-center py-2 px-2 text-[10px] md:text-xs font-bold uppercase tracking-widest animate-pulse">
+            Oportunidade Única: Restam apenas 3 vagas com desconto
         </div>
 
-        <div class="container mx-auto px-4 max-w-2xl mt-8 md:mt-12 text-center">
+        <div class="container mx-auto px-4 max-w-xl mt-6">
             
-            <!-- Logo Small -->
-            <img src="https://i.postimg.cc/G22Gz9k7/Design-sem-nome-(4).png" alt="Estratégia CNH" class="h-8 mx-auto mb-6 opacity-80 grayscale hover:grayscale-0 transition-all" />
-
-            <!-- Headline -->
-            <div class="bg-red-100 border-2 border-red-500 rounded-xl p-4 mb-6 inline-block">
-                <p class="text-red-700 font-bold text-sm uppercase flex items-center gap-2 justify-center">
-                    <i data-lucide="lock" class="w-4 h-4"></i> Oportunidade Única de Recuperação
+            <!-- Headline Promessa Forte -->
+            <div class="text-center mb-6">
+                <h1 class="font-display text-3xl md:text-4xl font-black text-traffic-black uppercase leading-none mb-3">
+                    Acesso Liberado: <br />
+                    <span class="text-green-600">Estratégia CNH 2025</span>
+                </h1>
+                <p class="text-gray-600 text-sm md:text-base font-medium leading-relaxed px-2">
+                    O método passo a passo para você passar na teórica e prática <strong class="text-black">mesmo sem depender da autoescola</strong>.
                 </p>
             </div>
 
-            <h1 class="font-display text-4xl md:text-6xl font-black text-traffic-black leading-none mb-4 uppercase">
-                Espera! <span class="text-traffic-red">Antes de sair...</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed mb-8 px-2">
-                Liberamos um <strong>desconto especial de última hora</strong> somente agora para você não ficar sem sua preparação e finalizar sua inscrição.
-            </p>
-
-            <!-- Timer Box -->
-            <div class="bg-black text-traffic-yellow p-4 rounded-lg shadow-xl mb-10 max-w-sm mx-auto border-2 border-traffic-yellow relative overflow-hidden">
-                <div class="absolute inset-0 warning-stripes opacity-10"></div>
-                <p class="text-xs uppercase tracking-widest font-bold mb-1 relative z-10 text-white">Essa oferta expira em:</p>
-                <div id="countdown" class="text-4xl font-mono font-bold relative z-10">10:00</div>
-            </div>
-
-        </div>
-
-        <!-- 2. RELEMBRE A DOR + 3. SOLUÇÃO -->
-        <section class="bg-white border-y border-gray-200 py-10">
-            <div class="container mx-auto px-4 max-w-2xl">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="w-full md:w-1/3">
-                        <img src="https://i.postimg.cc/Pfv2kFw6/Design-sem-nome-(6).png" alt="Kit CNH" class="w-full h-auto drop-shadow-xl transform -rotate-3 hover:rotate-0 transition-transform" />
-                    </div>
-                    <div class="w-full md:w-2/3">
-                        <h3 class="font-display text-2xl font-bold uppercase mb-4">Você sabe que precisa disso:</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
-                                <span class="text-sm font-medium text-gray-700"><strong>Conteúdo Teórico Resumido:</strong> Tudo o que cai na prova, sem enrolação.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
-                                <span class="text-sm font-medium text-gray-700"><strong>Prática Descomplicada:</strong> Vídeos de baliza e manobras passo a passo.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600 shrink-0 mt-0.5"></i>
-                                <span class="text-sm font-medium text-gray-700"><strong>Atualizado 2025:</strong> 100% alinhado com a Nova Lei da CNH.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="x-circle" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
-                                <span class="text-sm font-medium text-gray-500 line-through">Sem material chato da autoescola.</span>
-                            </li>
-                        </ul>
+            <!-- VSL / Imagem Prova -->
+            <div class="relative w-full aspect-video bg-black rounded-xl shadow-lg border border-gray-200 overflow-hidden mb-8 group cursor-pointer">
+                <img 
+                    src="https://picsum.photos/seed/aproval/800/450" 
+                    alt="Aluno Aprovado" 
+                    class="w-full h-full object-cover opacity-80"
+                />
+                <div class="absolute inset-0 flex items-center justify-center">
+                     <div class="w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center animate-pulse">
+                        <i data-lucide="play-circle" class="w-10 h-10 text-white fill-white"></i>
+                     </div>
+                </div>
+                <div class="absolute bottom-4 left-4 right-4">
+                    <div class="bg-black/70 backdrop-blur-sm text-white text-xs p-2 rounded inline-block">
+                        <span class="text-traffic-yellow font-bold">Prova Real:</span> Veja como funciona a estratégia.
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- 4. OFERTA EXCLUSIVA + 5. LOSS AVERSION -->
-        <div class="container mx-auto px-4 max-w-2xl mt-10 text-center relative z-10">
-            
-            <div class="bg-white border-2 border-dashed border-red-500 rounded-2xl p-6 md:p-10 shadow-[0_10px_40px_rgba(217,4,41,0.15)] relative overflow-hidden">
-                <!-- Tag -->
-                <div class="absolute top-0 right-0 bg-traffic-red text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase">
-                    Oferta Relâmpago
+            <!-- Box da Oferta (Checkout Style) -->
+            <div class="bg-white border-2 border-traffic-black rounded-xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mb-8 relative">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-traffic-yellow text-black text-xs font-black uppercase px-4 py-1 rounded-full border-2 border-black">
+                    Oferta Especial
                 </div>
 
-                <p class="text-gray-500 font-bold uppercase text-sm mb-2">Preço original:</p>
-                <div class="text-2xl text-gray-400 line-through font-bold mb-4">R$ 47,00</div>
-                
-                <p class="text-green-600 font-black uppercase tracking-wider text-sm mb-2 bg-green-50 rounded-full inline-block px-4 py-1 border border-green-200">
-                    Somente nesta página:
-                </p>
-                
-                <div class="text-6xl md:text-7xl font-display font-black text-traffic-black mb-2 tracking-tight">
-                    R$ 37<span class="text-2xl align-top text-gray-500">,00</span>
-                </div>
-                
-                <p class="text-xs text-gray-400 mb-8 max-w-xs mx-auto">
-                    Pagamento único. Acesso vitalício. Garantia total.
-                </p>
+                <h3 class="text-lg font-bold uppercase mb-4 flex items-center gap-2 border-b border-gray-100 pb-2">
+                    <i data-lucide="package-check" class="w-5 h-5 text-black"></i> Resumo do Pedido:
+                </h3>
 
-                <!-- 7. CTA FINAL -->
-                <a href="https://checkout.estrategiacnh.com.br/checkout/v3/1NS7kLitHMQCZTvap6kz?src=recuperacao37" class="block w-full bg-green-600 hover:bg-green-500 text-white font-black text-xl md:text-2xl py-5 px-4 rounded-xl shadow-[0_4px_0_#15803d] active:shadow-none active:translate-y-1 transition-all uppercase leading-tight mb-4 group">
-                    <span class="flex items-center justify-center gap-2">
-                        Sim, Quero o Desconto Agora
-                        <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i>
-                    </span>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check" class="w-4 h-4 text-green-600 mt-1 shrink-0 stroke-[3]"></i>
+                        <span class="text-sm font-bold text-gray-800">Método Completo (Teoria + Prática)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check" class="w-4 h-4 text-green-600 mt-1 shrink-0 stroke-[3]"></i>
+                        <span class="text-sm text-gray-600">Bônus: Macetes da Prova Teórica</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check" class="w-4 h-4 text-green-600 mt-1 shrink-0 stroke-[3]"></i>
+                        <span class="text-sm text-gray-600">Bônus: Guia de Baliza Descomplicada</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check" class="w-4 h-4 text-green-600 mt-1 shrink-0 stroke-[3]"></i>
+                        <span class="text-sm text-gray-600">Bônus: Banco de Questões do Detran</span>
+                    </li>
+                </ul>
+
+                <!-- Preço -->
+                <div class="bg-gray-50 rounded-lg p-4 text-center border border-gray-100 mb-6">
+                    <p class="text-xs text-gray-400 line-through font-medium mb-1">De R$ 197,00 por apenas:</p>
+                    <div class="text-5xl font-display font-black text-green-600 tracking-tight leading-none mb-1">
+                        R$ 37,00
+                    </div>
+                    <p class="text-[10px] text-gray-500 uppercase font-bold tracking-wide">Pagamento Único • Acesso Vitalício</p>
+                </div>
+
+                <!-- CTA -->
+                <a href="https://checkout.estrategiacnh.com.br/checkout/v3/1NS7kLitHMQCZTvap6kz" class="block w-full bg-green-500 hover:bg-green-400 text-white text-xl font-black py-4 rounded-lg uppercase text-center shadow-[0_4px_0_#15803d] active:shadow-none active:translate-y-1 transition-all mb-3">
+                    Quero Meu Acesso Agora
                 </a>
-
-                <div class="flex items-center justify-center gap-4 text-xs font-bold text-gray-500">
-                    <span class="flex items-center gap-1"><i data-lucide="lock" class="w-3 h-3"></i> Compra Segura</span>
-                    <span class="flex items-center gap-1"><i data-lucide="zap" class="w-3 h-3"></i> Acesso Imediato</span>
+                
+                <div class="flex justify-center items-center gap-2 opacity-60">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logotipo_Pix_fundo_transparente.png" class="h-4" alt="Pix" />
+                     <span class="text-[10px] text-gray-500 font-bold">Acesso liberado na hora via Pix</span>
                 </div>
             </div>
 
-            <p class="mt-6 text-red-600 text-xs font-bold uppercase tracking-wider animate-pulse">
-                ⚠️ Se você fechar esta página, o preço voltará para R$ 47,00.
-            </p>
+            <!-- Garantia -->
+            <div class="flex items-center gap-4 bg-gray-50 border border-gray-200 p-4 rounded-lg mb-8">
+                <i data-lucide="shield-check" class="w-10 h-10 text-black shrink-0"></i>
+                <div>
+                    <h4 class="font-bold text-sm uppercase">Garantia de 7 Dias</h4>
+                    <p class="text-xs text-gray-500 leading-tight">Se não gostar, devolvemos 100% do seu dinheiro. Sem risco.</p>
+                </div>
+            </div>
 
-        </div>
-
-        <!-- 6. QUEBRA DE OBJEÇÕES (FAQ) -->
-        <div class="container mx-auto px-4 max-w-xl mt-12 mb-16">
-            <h4 class="text-center font-bold text-gray-400 uppercase text-xs tracking-widest mb-6">Dúvidas Rápidas</h4>
-            
-            <div class="space-y-3">
-                <details class="group bg-white rounded-lg border border-gray-200 overflow-hidden">
-                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-sm hover:bg-gray-50">
-                        <span>O acesso é imediato?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400"></i>
-                        </span>
+            <!-- FAQ Rápido -->
+            <div class="space-y-2 mb-12">
+                <h4 class="font-bold text-sm uppercase text-gray-400 text-center mb-4 tracking-widest">Dúvidas Frequentes</h4>
+                
+                <details class="group bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <summary class="flex justify-between items-center p-3 text-sm font-bold text-gray-800 cursor-pointer list-none hover:bg-gray-50">
+                        Como recebo o acesso?
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform group-open:rotate-180"></i>
                     </summary>
-                    <div class="text-gray-600 text-sm p-4 pt-0 leading-relaxed">
-                        Sim! Assim que o pagamento de R$ 37,00 for confirmado, você recebe seu login e senha no e-mail cadastrado na hora.
+                    <div class="p-3 pt-0 text-xs text-gray-600 leading-relaxed">
+                        Chega no seu e-mail imediatamente após a confirmação do pagamento.
                     </div>
                 </details>
-                
-                <details class="group bg-white rounded-lg border border-gray-200 overflow-hidden">
-                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-4 text-sm hover:bg-gray-50">
-                        <span>Tenho garantia mesmo com desconto?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400"></i>
-                        </span>
+
+                <details class="group bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <summary class="flex justify-between items-center p-3 text-sm font-bold text-gray-800 cursor-pointer list-none hover:bg-gray-50">
+                        Serve para carro e moto?
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform group-open:rotate-180"></i>
                     </summary>
-                    <div class="text-gray-600 text-sm p-4 pt-0 leading-relaxed">
-                        Com certeza. A garantia de 7 dias é lei e nós respeitamos. Se não gostar, devolvemos seus R$ 37,00 centavo por centavo.
+                    <div class="p-3 pt-0 text-xs text-gray-600 leading-relaxed">
+                        Sim, cobrimos ambas as categorias com foco total nos exames.
                     </div>
                 </details>
             </div>
-        </div>
+            
+            <footer class="text-center text-[10px] text-gray-400 pb-8">
+                <p>&copy; 2025 Estratégia CNH - Todos os direitos reservados.</p>
+            </footer>
 
-        <!-- Footer Simple -->
-        <footer class="text-center py-6 border-t border-gray-200 text-xs text-gray-400">
-            <p>&copy; 2025 Estratégia CNH. Todos os direitos reservados.</p>
-        </footer>
+        </div>
     </div>
 
 
@@ -992,7 +982,7 @@
             if(home && offer) {
                 home.classList.add('hidden');
                 offer.classList.remove('hidden');
-                document.title = "Espere! Oferta Exclusiva - Estratégia CNH";
+                document.title = "Estratégia CNH | Acesso Liberado";
                 window.scrollTo(0,0);
                 
                 // Re-init icons for the new visible content
@@ -1002,7 +992,7 @@
                 if(!window.offerTimerStarted) {
                     var tenMinutes = 60 * 10,
                     display = document.querySelector('#countdown');
-                    startCountdownOffer(tenMinutes, display);
+                    // if(display) startCountdownOffer(tenMinutes, display); // Removed timer from new simple layout
                     window.offerTimerStarted = true;
                 }
             }
