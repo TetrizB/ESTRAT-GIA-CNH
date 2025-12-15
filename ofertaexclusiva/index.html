@@ -12,6 +12,15 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://estrategiacnh.com.br/" />
 
+    <!-- Performance Optimizations: Preconnects -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdn.utmify.com.br" />
+    <link rel="preconnect" href="https://i.postimg.cc" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://estrategiacnh.com.br/" />
@@ -45,11 +54,6 @@
       defer
     ></script>
 
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://unpkg.com" />
-    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -123,15 +127,6 @@
         display: none !important;
       }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.559.0"
-  }
-}
-</script>
 </head>
 <body class="bg-white font-sans text-gray-900 selection:bg-traffic-yellow selection:text-black pb-20 md:pb-0">
 
@@ -156,7 +151,7 @@
                 
                 <!-- Logo -->
                 <div class="flex justify-center mb-6">
-                    <img src="https://i.postimg.cc/G22Gz9k7/Design-sem-nome-(4).png" alt="Estratégia CNH Logo" class="h-12 md:h-16 object-contain" />
+                    <img src="https://i.postimg.cc/G22Gz9k7/Design-sem-nome-(4).png" alt="Estratégia CNH Logo" class="h-12 md:h-16 object-contain" width="200" height="64" />
                 </div>
 
                 <!-- Urgency Tag -->
@@ -179,7 +174,7 @@
                     Por isso criamos uma <strong>estratégia completa</strong> pra você se preparar sem ficar perdido.
                 </p>
 
-                <!-- Hero Image -->
+                <!-- Hero Image (LCP OPTIMIZED) -->
                 <div onclick="document.getElementById('offer').scrollIntoView({behavior: 'smooth'})" class="relative w-full max-w-3xl mx-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-4 border-black mb-8 overflow-hidden cursor-pointer hover:shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-300">
                     <img 
                         src="https://i.postimg.cc/q7wMkwwj/INSTRUTOR-RODRIGO-SANTOS.png" 
@@ -187,6 +182,8 @@
                         width="800"
                         height="450"
                         fetchpriority="high"
+                        loading="eager"
+                        decoding="async"
                         class="w-full h-auto object-cover"
                     />
                 </div>
@@ -275,6 +272,7 @@
                                 width="500"
                                 height="500"
                                 loading="lazy"
+                                decoding="async"
                                 class="w-full h-auto drop-shadow-2xl mx-auto filter"
                             />
                         </div>
@@ -405,7 +403,7 @@
                         
                         <!-- Review 1 -->
                         <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start transform hover:-translate-y-1 transition-transform duration-300">
-                            <img src="https://picsum.photos/seed/rafael/100/100" alt="Rafael Souza" loading="lazy" class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 shrink-0" />
+                            <img src="https://picsum.photos/seed/rafael/100/100" alt="Rafael Souza" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 shrink-0" />
                             <div class="flex-1">
                                 <div class="flex justify-between items-center mb-1">
                                     <h4 class="font-bold text-gray-900 text-sm">Rafael Souza</h4>
@@ -423,7 +421,7 @@
                         </div>
                         <!-- Review 2 -->
                         <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start transform hover:-translate-y-1 transition-transform duration-300">
-                            <img src="https://picsum.photos/seed/mariana/100/100" alt="Mariana Costa" loading="lazy" class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 shrink-0" />
+                            <img src="https://picsum.photos/seed/mariana/100/100" alt="Mariana Costa" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 shrink-0" />
                             <div class="flex-1">
                                 <div class="flex justify-between items-center mb-1">
                                     <h4 class="font-bold text-gray-900 text-sm">Mariana Costa</h4>
@@ -441,7 +439,7 @@
                         </div>
                         <!-- Review 3 -->
                         <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex gap-4 items-start transform hover:-translate-y-1 transition-transform duration-300">
-                            <img src="https://picsum.photos/seed/pedro/100/100" alt="Pedro Henrique" loading="lazy" class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 shrink-0" />
+                            <img src="https://picsum.photos/seed/pedro/100/100" alt="Pedro Henrique" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 shrink-0" />
                             <div class="flex-1">
                                 <div class="flex justify-between items-center mb-1">
                                     <h4 class="font-bold text-gray-900 text-sm">Pedro Henrique</h4>
@@ -641,272 +639,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- FINAL DECISION SECTION -->
-        <section class="py-16 md:py-24 bg-zinc-900 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-yellow-500/10 to-transparent pointer-events-none"></div>
-
-            <div class="container mx-auto px-4 max-w-5xl relative z-10">
-                
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-5xl font-display uppercase font-black text-white mb-4 leading-none">
-                        A Decisão Agora É Sua — <br />
-                        <span class="text-traffic-yellow">Estar Preparado ou Ficar Para Trás</span>
-                    </h2>
-                    <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
-                        Os novos exames vão exigir estratégia. Quem começa antes passa antes. Quem espera… trava.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-                    <!-- Option 1 -->
-                    <div class="bg-zinc-800 border-2 border-green-500/50 rounded-xl p-6 md:p-8 flex flex-col h-full transform hover:scale-[1.02] transition-transform shadow-xl">
-                        <div class="bg-green-500/20 w-fit px-3 py-1 rounded text-green-400 font-bold text-sm uppercase mb-4 tracking-wider border border-green-500/30">
-                            Opção Inteligente
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Entrar agora</h3>
-                        <p class="text-gray-400 leading-relaxed flex-grow">
-                            Estudar com clareza, garantir sua preparação com material completo e passar de primeira sem depender de ninguém.
-                        </p>
-                        <div class="mt-6 flex items-center text-green-400 font-bold gap-2">
-                            <i data-lucide="check" class="w-5 h-5"></i> Resultado: Aprovação Rápida
-                        </div>
-                    </div>
-
-                    <!-- Option 2 -->
-                    <div class="bg-zinc-950 border-2 border-zinc-800 rounded-xl p-6 md:p-8 flex flex-col h-full opacity-70 hover:opacity-100 transition-opacity">
-                        <div class="bg-red-500/10 w-fit px-3 py-1 rounded text-red-500 font-bold text-sm uppercase mb-4 tracking-wider border border-red-500/20">
-                            Opção Arriscada
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-300 mb-2">Esperar a lei mudar</h3>
-                        <p class="text-gray-500 leading-relaxed flex-grow">
-                            Enfrentar os novos exames sem nenhum material, perdido e correndo o risco de reprovar e gastar o dobro depois.
-                        </p>
-                        <div class="mt-6 flex items-center text-red-500 font-bold gap-2">
-                            <i data-lucide="x" class="w-5 h-5"></i> Resultado: Dificuldade e Atraso
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Summary List -->
-                <div class="bg-black/40 border border-white/10 rounded-xl p-6 mb-12 max-w-3xl mx-auto backdrop-blur-sm">
-                    <div class="flex flex-wrap justify-center gap-4 md:gap-8">
-                        <div class="flex items-center gap-2 text-gray-300 font-medium text-sm md:text-base">
-                            <span class="text-traffic-yellow"><i data-lucide="video" class="w-4 h-4"></i></span> Método Completo
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-300 font-medium text-sm md:text-base">
-                            <span class="text-traffic-yellow"><i data-lucide="book-open" class="w-4 h-4"></i></span> Material Atualizado
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-300 font-medium text-sm md:text-base">
-                            <span class="text-traffic-yellow"><i data-lucide="play" class="w-4 h-4"></i></span> Videoaulas e Ebooks
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-300 font-medium text-sm md:text-base">
-                            <span class="text-traffic-yellow"><i data-lucide="check" class="w-4 h-4"></i></span> Simulados Exclusivos
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-300 font-medium text-sm md:text-base">
-                            <span class="text-traffic-yellow"><i data-lucide="arrow-right" class="w-4 h-4"></i></span> Acesso Imediato
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-300 font-medium text-sm md:text-base">
-                            <span class="text-traffic-yellow"><i data-lucide="shield-check" class="w-4 h-4"></i></span> Garantia Sem Risco
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mega CTA -->
-                <div class="max-w-2xl mx-auto text-center">
-                    <button onclick="window.location.href='https://checkout.estrategiacnh.com.br/checkout/v3/D5LG9DUPVDQKtBGOdQ5d'" class="w-full bg-traffic-yellow hover:bg-yellow-400 text-black font-black text-2xl md:text-3xl py-6 md:py-8 px-6 rounded-lg shadow-[0_0_30px_rgba(255,208,0,0.3)] hover:shadow-[0_0_50px_rgba(255,208,0,0.5)] active:scale-95 transition-all uppercase leading-none mb-4">
-                        Quero Garantir Minha <br class="md:hidden" /> Estratégia Agora
-                    </button>
-                    <p class="text-red-400 font-bold text-sm uppercase tracking-wide mb-8 animate-pulse">
-                        Última chance de entrar pelo menor valor antes da mudança oficial.
-                    </p>
-
-                    <p class="text-gray-500 text-sm max-w-lg mx-auto border-t border-zinc-800 pt-6">
-                        "Se você quer agilizar sua aprovação, o caminho tá pronto. Só falta você começar."
-                    </p>
-                    
-                    <p class="text-zinc-600 text-xs mt-4">
-                        Quando esta página sair do ar, não posso garantir que o preço será o mesmo.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="bg-black text-gray-500 py-12 text-sm border-t border-zinc-800 pb-24 md:pb-12">
-            <div class="container mx-auto px-4 text-center">
-                
-                <div class="flex justify-center mb-6">
-                    <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/5">
-                        <img src="https://i.postimg.cc/G22Gz9k7/Design-sem-nome-(4).png" alt="Estratégia CNH" class="h-10 opacity-90 hover:opacity-100 transition-opacity" />
-                    </div>
-                </div>
-
-                <p class="mb-6 text-white font-bold uppercase tracking-widest text-xs">Estratégia CNH &copy; 2025</p>
-                
-                <div class="flex justify-center gap-6 mb-8">
-                <a href="#" class="hover:text-traffic-yellow transition-colors underline decoration-zinc-700 underline-offset-4">Termos de Uso</a>
-                <a href="#" class="hover:text-traffic-yellow transition-colors underline decoration-zinc-700 underline-offset-4">Política de Privacidade</a>
-                <a href="#" class="hover:text-traffic-yellow transition-colors underline decoration-zinc-700 underline-offset-4">Contato</a>
-                </div>
-                
-                <p class="max-w-2xl mx-auto text-[10px] md:text-xs opacity-40 leading-relaxed">
-                Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usar resultados reais.
-                </p>
-                
-                <!-- Hidden Link that triggers Offer Mode -->
-                <!-- We use a real link here, so bots can crawl it, but we let JS handle it first if possible -->
-                <div class="mt-8 text-center">
-                    <a href="/ofertaexclusiva/" class="text-[10px] text-zinc-900 hover:text-zinc-800 transition-colors cursor-default select-none">•</a>
-                </div>
-            </div>
-        </footer>
-
-        <!-- STICKY MOBILE CTA -->
-        <div id="sticky-cta" class="fixed bottom-0 left-0 w-full p-3 bg-white/95 backdrop-blur border-t-4 border-traffic-yellow z-50 md:hidden shadow-[0_-5px_20px_rgba(0,0,0,0.15)] pb-6 transform translate-y-full transition-transform duration-300">
-            <button onclick="document.getElementById('offer').scrollIntoView({behavior: 'smooth'})" class="w-full bg-green-600 hover:bg-green-500 text-white font-black text-lg py-4 rounded-lg shadow-md uppercase tracking-wide flex items-center justify-center gap-2 animate-pulse-fast active:scale-95 transition-transform">
-                Quero Minha Estratégia Agora
-            </button>
-        </div>
-    </div>
-
-
-    <!-- ========================================= -->
-    <!-- OFFER PAGE CONTENT (ID: page-offer)   -->
-    <!-- ========================================= -->
-    <!-- Layout "Estratégia CNH One Page Checkout" -->
-    <div id="page-offer" class="hidden bg-gray-50 min-h-screen pb-12">
-        
-        <!-- Header Minimalista -->
-        <header class="bg-white border-b border-gray-100 py-4 sticky top-0 z-50 shadow-sm">
-            <div class="container mx-auto px-4 flex justify-between items-center max-w-xl">
-                <img src="https://i.postimg.cc/G22Gz9k7/Design-sem-nome-(4).png" alt="Estratégia CNH" class="h-6 md:h-8" />
-                <div class="flex items-center gap-1 text-[10px] font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full border border-green-200">
-                    <i data-lucide="lock" class="w-3 h-3"></i> Ambiente Seguro
-                </div>
-            </div>
-        </header>
-
-        <!-- Faixa de Urgência -->
-        <div class="bg-traffic-red text-white text-center py-2 px-2 text-[10px] md:text-xs font-bold uppercase tracking-widest animate-pulse">
-            Oportunidade Única: Restam apenas 3 vagas com desconto
-        </div>
-
-        <div class="container mx-auto px-4 max-w-xl mt-6">
-            
-            <!-- Headline Promessa Forte -->
-            <div class="text-center mb-6">
-                <h1 class="font-display text-3xl md:text-4xl font-black text-traffic-black uppercase leading-none mb-3">
-                    Acesso Liberado: <br />
-                    <span class="text-green-600">Estratégia CNH 2025</span>
-                </h1>
-                <p class="text-gray-600 text-sm md:text-base font-medium leading-relaxed px-2">
-                    O método passo a passo para você passar na teórica e prática <strong class="text-black">mesmo sem depender da autoescola</strong>.
-                </p>
-            </div>
-
-            <!-- VSL / Imagem Prova -->
-            <div class="relative w-full aspect-video bg-black rounded-xl shadow-lg border border-gray-200 overflow-hidden mb-8 group cursor-pointer">
-                <img 
-                    src="https://picsum.photos/seed/aproval/800/450" 
-                    alt="Aluno Aprovado" 
-                    class="w-full h-full object-cover opacity-80"
-                />
-                <div class="absolute inset-0 flex items-center justify-center">
-                     <div class="w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center animate-pulse">
-                        <i data-lucide="play-circle" class="w-10 h-10 text-white fill-white"></i>
-                     </div>
-                </div>
-                <div class="absolute bottom-4 left-4 right-4">
-                    <div class="bg-black/70 backdrop-blur-sm text-white text-xs p-2 rounded inline-block">
-                        <span class="text-traffic-yellow font-bold">Prova Real:</span> Veja como funciona a estratégia.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Box da Oferta (Checkout Style) -->
-            <div class="bg-white border-2 border-traffic-black rounded-xl p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mb-8 relative">
-                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-traffic-yellow text-black text-xs font-black uppercase px-4 py-1 rounded-full border-2 border-black">
-                    Oferta Especial
-                </div>
-
-                <h3 class="text-lg font-bold uppercase mb-4 flex items-center gap-2 border-b border-gray-100 pb-2">
-                    <i data-lucide="package-check" class="w-5 h-5 text-black"></i> Resumo do Pedido:
-                </h3>
-
-                <ul class="space-y-3 mb-6">
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check" class="w-4 h-4 text-green-600 mt-1 shrink-0 stroke-[3]"></i>
-                        <span class="text-sm font-bold text-gray-800">Método Completo (Teoria + Prática)</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check" class="w-4 h-4 text-green-600 mt-1 shrink-0 stroke-[3]"></i>
-                        <span class="text-sm text-gray-600">Bônus: Macetes da Prova Teórica</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check" class="w-4 h-4 text-green-600 mt-1 shrink-0 stroke-[3]"></i>
-                        <span class="text-sm text-gray-600">Bônus: Guia de Baliza Descomplicada</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check" class="w-4 h-4 text-green-600 mt-1 shrink-0 stroke-[3]"></i>
-                        <span class="text-sm text-gray-600">Bônus: Banco de Questões do Detran</span>
-                    </li>
-                </ul>
-
-                <!-- Preço -->
-                <div class="bg-gray-50 rounded-lg p-4 text-center border border-gray-100 mb-6">
-                    <p class="text-xs text-gray-400 line-through font-medium mb-1">De R$ 197,00 por apenas:</p>
-                    <div class="text-5xl font-display font-black text-green-600 tracking-tight leading-none mb-1">
-                        R$ 37,00
-                    </div>
-                    <p class="text-[10px] text-gray-500 uppercase font-bold tracking-wide">Pagamento Único • Acesso Vitalício</p>
-                </div>
-
-                <!-- CTA -->
-                <a href="https://checkout.estrategiacnh.com.br/checkout/v3/1NS7kLitHMQCZTvap6kz" class="block w-full bg-green-500 hover:bg-green-400 text-white text-xl font-black py-4 rounded-lg uppercase text-center shadow-[0_4px_0_#15803d] active:shadow-none active:translate-y-1 transition-all mb-3">
-                    Quero Meu Acesso Agora
-                </a>
-                
-                <div class="flex justify-center items-center gap-2 opacity-60">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logotipo_Pix_fundo_transparente.png" class="h-4" alt="Pix" />
-                     <span class="text-[10px] text-gray-500 font-bold">Acesso liberado na hora via Pix</span>
-                </div>
-            </div>
-
-            <!-- Garantia -->
-            <div class="flex items-center gap-4 bg-gray-50 border border-gray-200 p-4 rounded-lg mb-8">
-                <i data-lucide="shield-check" class="w-10 h-10 text-black shrink-0"></i>
-                <div>
-                    <h4 class="font-bold text-sm uppercase">Garantia de 7 Dias</h4>
-                    <p class="text-xs text-gray-500 leading-tight">Se não gostar, devolvemos 100% do seu dinheiro. Sem risco.</p>
-                </div>
-            </div>
-
-            <!-- FAQ Rápido -->
-            <div class="space-y-2 mb-12">
-                <h4 class="font-bold text-sm uppercase text-gray-400 text-center mb-4 tracking-widest">Dúvidas Frequentes</h4>
-                
-                <details class="group bg-white border border-gray-200 rounded-lg overflow-hidden">
-                    <summary class="flex justify-between items-center p-3 text-sm font-bold text-gray-800 cursor-pointer list-none hover:bg-gray-50">
-                        Como recebo o acesso?
-                        <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform group-open:rotate-180"></i>
-                    </summary>
-                    <div class="p-3 pt-0 text-xs text-gray-600 leading-relaxed">
-                        Chega no seu e-mail imediatamente após a confirmação do pagamento.
-                    </div>
-                </details>
-
-                <details class="group bg-white border border-gray-200 rounded-lg overflow-hidden">
-                    <summary class="flex justify-between items-center p-3 text-sm font-bold text-gray-800 cursor-pointer list-none hover:bg-gray-50">
-                        Serve para carro e moto?
-                        <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform group-open:rotate-180"></i>
-                    </summary>
-                    <div class="p-3 pt-0 text-xs text-gray-600 leading-relaxed">
-                        Sim, cobrimos ambas as categorias com foco total nos exames.
-                    </div>
-                </details>
             </div>
             
             <footer class="text-center text-[10px] text-gray-400 pb-8">
